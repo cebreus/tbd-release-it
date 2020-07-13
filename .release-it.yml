@@ -1,0 +1,38 @@
+git:
+  changelog: git log --pretty=format:"* %s (%h)" ${from}...${to}
+  # 'changelog': 'npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs'
+  requireCleanWorkingDir: true
+  requireBranch: develop
+  requireUpstream: true
+  requireCommits: false
+  addUntrackedFiles: false
+  commit: true
+  commitMessage: 'chore: release ${version}'
+  commitArgs: []
+  tag: true
+  tagName:
+  tagAnnotation: Release ${version}
+  tagArgs: []
+  push: true
+  pushArgs:
+    - '--follow-tags'
+  pushRepo: ''
+npm:
+  publish: false
+github:
+  release: false
+gitlab:
+  release: false
+hooks:
+  # before:init:
+  # - npm run lint
+  # - npm test
+  afte#r:my-plugin:bump: './bin/my-script.sh'
+  after:bump:
+    - npx auto-changelog -p --commit-limit false --template keepachangelog.hbs
+    # - npx auto-changelog -p
+    # - git add CHANGELOG.md package.json package-lock.json
+    # - git commit --ammend
+    # - npm run build
+  # after:git:release: echo After git push, before github release
+  after:release: echo Successfully released ${name} v${version} to ${repo.repository}.

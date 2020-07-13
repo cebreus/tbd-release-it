@@ -1,0 +1,11 @@
+{
+  "name": "tbd-release-it",
+  "version": "0.0.0",
+  "scripts": {
+    "r": "node ./node_modules/release-it/bin/release-it.js",
+    "release": "node ./node_modules/release-it/bin/release-it.js --ci"
+  },
+  "devDependencies": {
+    "release-it": "*"
+  }
+}
