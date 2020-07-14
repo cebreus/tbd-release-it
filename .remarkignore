@@ -1,0 +1,8 @@
+*.min.*
+.cache
+build
+dist
+node_modules
+static
+temp
+.temp
