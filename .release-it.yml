@@ -4,7 +4,7 @@ hooks:
   # - npm test
   # after:my-plugin:bump: './bin/my-script.sh'
   after:bump:
-    - npx auto-changelog -p --stdout --commit-limit false --hide-credit --template keepachangelog.hbs
+    - npx auto-changelog -p --stdout --commit-limit false --hide-credit --ignore-commit-pattern ^fixup! --template keepachangelog.hbs
     # - git add CHANGELOG.md
     # - npm run build
   # after:git:release: echo After git push, before github release
