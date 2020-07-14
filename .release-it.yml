@@ -5,12 +5,12 @@ git:
   # 'changelog': 'npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs'
   'changelog': 'npx @release-it/conventional-changelog --stdout'
   requireCleanWorkingDir: true
-  requireBranch: false
+  requireBranch: develop
   requireUpstream: true
   requireCommits: false
   addUntrackedFiles: false
   commit: true
-  commitMessage: Release ${version}
+  commitMessage: 'chore: release ${version}'
   commitArgs: []
   tag: true
   tagName:
