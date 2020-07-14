@@ -26,9 +26,8 @@ github:
   release: false
 gitlab:
   release: false
-plugins:
-  '@release-it/conventional-changelog':
-    preset: angular
-    infile: CHANGELOG.md
-#   '@release-it/keep-a-changelog':
-#     filename: CHANGELOG.md
+# plugins:
+#   '@release-it/conventional-changelog':
+#     preset: angular
+#     infile: CHANGELOG.md
+
