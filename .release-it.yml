@@ -1,10 +1,6 @@
-hooks:
-  before:init": '[ "$(git rev-list $(git describe --tags --abbrev=0)..HEAD --count)" = "0" ] || release-it'
-# 'after:bump': 'npx auto-changelog -p'
 git:
-  changelog: git log --pretty=format:"* %s (%h)" ${from}...${to}
-  # 'changelog': 'npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs'
-
+  # changelog: git log --pretty=format:"* %s (%h)" ${from}...${to}
+  'changelog': 'npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs'
   requireCleanWorkingDir: true
   requireBranch: develop
   requireUpstream: true
@@ -27,6 +23,8 @@ github:
   release: false
 gitlab:
   release: false
+hooks:
+  'after:bump': 'npx auto-changelog -p'
 # plugins:
 #   '@release-it/conventional-changelog':
 #     preset: angular

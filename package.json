@@ -6,8 +6,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@release-it/conventional-changelog": "^1.1.4",
-    "@release-it/keep-a-changelog": "^1.1.1",
+    
+    
     "release-it": "*"
   }
 }
