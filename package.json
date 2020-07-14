@@ -3,9 +3,16 @@
   "version": "0.0.2",
   "scripts": {
     "r": "node ./node_modules/release-it/bin/release-it.js",
-    "release": "node ./node_modules/release-it/bin/release-it.js --ci"
+    "release": "node ./node_modules/release-it/bin/release-it.js --ci",
+    "text:lint": "remark -q .",
+    "text:fix": "remark -q . -o --"
   },
   "devDependencies": {
-    "release-it": "*"
+    "release-it": "*",
+    "remark": "^12.0.0",
+    "remark-cli": "^8.0.0",
+    "remark-lint-match-punctuation": "^0.2.0",
+    "remark-preset-lint-consistent": "^3.0.0",
+    "remark-preset-lint-recommended": "^4.0.0"
   }
 }
