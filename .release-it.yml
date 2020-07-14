@@ -12,7 +12,7 @@ hooks:
 git:
   changelog: git log --pretty=format:"* %s (%h)" ${from}...${to}
   requireCleanWorkingDir: true
-  requireBranch: master
+  requireBranch: develop
   requireUpstream: true
   requireCommits: false
   addUntrackedFiles: false
