@@ -1,6 +1,6 @@
 {
   "name": "tbd-release-it",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "scripts": {
     "release": "node ./node_modules/release-it/bin/release-it.js --ci"
   },
