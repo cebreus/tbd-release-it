@@ -1,4 +1,5 @@
 hooks:
+  'before:init': 'git add .'
 # 'after:bump': 'npx auto-changelog -p'
 git:
   # changelog: git log --pretty=format:"* %s (%h)" ${from}...${to}
