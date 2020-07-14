@@ -1,5 +1,5 @@
 hooks:
-  'before:init': 'git add .'
+  before:init": '[ "$(git rev-list $(git describe --tags --abbrev=0)..HEAD --count)" = "0" ] || release-it'
 # 'after:bump': 'npx auto-changelog -p'
 git:
   changelog: git log --pretty=format:"* %s (%h)" ${from}...${to}
