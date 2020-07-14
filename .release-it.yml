@@ -19,29 +19,7 @@ git:
   pushRepo: ''
 npm:
   publish: false
-  # publish: true
-  publishPath: '.'
-  tag:
-  otp:
-  ignoreVersion: false
-  skipChecks: false
 github:
   release: false
-  releaseName: Release ${version}
-  releaseNotes:
-  preRelease: false
-  draft: false
-  tokenRef: GITHUB_TOKEN
-  assets:
-  host:
-  timeout: 0
-  proxy:
-  skipChecks: false
 gitlab:
   release: false
-  releaseName: Release ${version}
-  releaseNotes:
-  tokenRef: GITLAB_TOKEN
-  assets:
-  origin:
-  skipChecks: false
